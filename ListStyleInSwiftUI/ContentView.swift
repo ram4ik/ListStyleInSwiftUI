@@ -18,8 +18,10 @@ struct ContentView: View {
                         Text(item)
                     }
                 }
+                .listStyle(PlainListStyle())
             }.navigationTitle("Fruits")
         }
+        //.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
