@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    var items = ["Apple", "Banana", "Cherry", "Dragon fruit"]
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(items, id: \.self) { item in
+                        Text(item)
+                    }
+                }
+            }.navigationTitle("Fruits")
+        }
     }
 }
 
